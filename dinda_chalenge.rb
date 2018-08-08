@@ -4,10 +4,12 @@ require './src/github_rank'
 require 'json'
 require 'net/http'
 
-class Job
+print 'Carregando'
+class DindaChalenge
   class << self
     def save_commits
       craw = GithubCrawler.new.craw_commits
+      print 'Rodando'
       File.open('teste.txt', 'w') do |file|
         file.write(craw)
       end

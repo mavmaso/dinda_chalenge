@@ -1,10 +1,10 @@
 require 'spec_helper'
-require './job'
+require './dinda_chalenge'
 
 describe 'Json final' do
   context 'successfully' do
     it 'ok' do
-      file = Job.save_commits
+      file = DindaChalenge.save_commits
       expect((file)).to eq('tasas')
     end
   end
