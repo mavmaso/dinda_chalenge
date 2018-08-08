@@ -1,7 +1,7 @@
 class HttpClient
   require 'net/http'
-  require 'invalid_response_error'
-  require 'invalid_url_format_error'
+  require_relative 'invalid_response_error'
+  require_relative 'invalid_url_format_error'
 
   def initialize(overrides: {})
     @http_client = overrides.fetch(:http_client) { Net::HTTP }

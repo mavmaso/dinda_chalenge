@@ -1,7 +1,6 @@
 class GithubCrawler
   require 'json'
-  require 'invalid_response_error'
-  require 'invalid_url_format_error'
+  require_relative 'github_http_client'
 
   ENDPOINT='https://api.github.com'.freeze
 
