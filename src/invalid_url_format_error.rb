@@ -1,0 +1,2 @@
+class InvalidUrlFormatError < StandardError
+end
