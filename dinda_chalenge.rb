@@ -4,7 +4,6 @@ require './src/github_rank'
 require 'json'
 require 'net/http'
 
-print 'Carregando'
 class DindaChalenge
   class << self
     def save_commits

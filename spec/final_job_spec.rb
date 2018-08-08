@@ -5,7 +5,7 @@ describe 'Json final' do
   context 'successfully' do
     it 'ok' do
       file = DindaChalenge.save_commits
-      expect((file)).to eq('tasas')
+      expect((file)).to eq('banana')
     end
   end
 end
