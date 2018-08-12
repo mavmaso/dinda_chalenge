@@ -8,11 +8,16 @@ class DindaChalenge
   class << self
     def save_commits
       craw = GithubCrawler.new.craw_commits
-      print 'Rodando'
+      commits = craw
+      #GithubCommiter.new(commits)
       File.open('teste.txt', 'w') do |file|
         file.write(craw)
       end
       File.read('teste.txt')
+      File.open('teste2.txt', 'w') do |file|
+        file.write(commits)
+      end
+      File.read('teste2.txt')
     end
   end
 end

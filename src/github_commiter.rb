@@ -1,12 +1,16 @@
-class Commit
-  def initialize(*args)
-    @author = args['commit']['author']
-    @message = args['message']
+class GithubCommiter
+  def initialize(commits:)
+    @commits = commits
   end
- end
- 
- array = []
- GithubCrawler.new.craw_commits.each do |banana|
-  array << Commit.new(banana)
- end
- 
+
+  def map_commit_to_commiter
+    @commits.map do |commit|
+      {
+          name: commit.dig("commit", "author", "name"),
+          ​email: commit.dig("commit", "author", "email"),
+          login:  commit.dig("author", "login"),
+          avatar_url: commit.dig("author", "avatar_url")
+      }
+    end
+  end
+end

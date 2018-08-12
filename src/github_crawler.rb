@@ -1,6 +1,6 @@
 class GithubCrawler
   require 'json'
-  require_relative 'github_http_client'
+  require_relative 'http_client'
 
   ENDPOINT='https://api.github.com'.freeze
 
