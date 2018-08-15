@@ -1,10 +1,9 @@
 class GithubCrawler
   require 'json'
-  require_relative 'http_client'
 
   ENDPOINT='https://api.github.com'.freeze
 
-  def initialize(http_client: HttpClient.new)
+  def initialize(http_client: NetHttpClient.new)
     @http_client = http_client
   end
 
